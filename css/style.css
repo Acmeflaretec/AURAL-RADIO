@@ -887,7 +887,7 @@ ul.social_icon li a:hover {
 .inner_page header {
      box-shadow: 0 -3px 12px 0px #a540e6;
      position: inherit;
-     background: #8f100a;
+     background: #9a145b;
 }
 .inner_page .about {
      margin:80px 0 190px 0;
@@ -898,3 +898,23 @@ ul.social_icon li a:hover {
 .inner_page .footer {
      margin-top: 110px;
 }
+#backToTopBtn {
+     display: none; /* Hide the button by default */
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     z-index: 99;
+     font-size: 16px;
+     border: none;
+     outline: none;
+     background-color: #9a145b;
+     color: white;
+     cursor: pointer;
+     padding: 15px;
+     border-radius: 50%;
+  }
+  
+  #backToTopBtn:hover {
+     background-color: #9a145b;
+  }
+  
