@@ -919,3 +919,60 @@ ul.social_icon li a:hover {
      background-color: #9a145b;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+  
+
+  .listen-live-section {
+     background-color: #f8f9fa;
+     padding: 50px 0;
+  }
+  
+  .listen-live-box {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 20px;
+     border: 2px solid #ddd;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     background-color: #fff;
+  }
+  
+  .logo img {
+     max-width: 100px;
+     height: auto;
+     margin-right: 20px;
+  }
+  
+  .player {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+  }
+  
+  .player img {
+     width: 60%;
+     height: 60%;
+     transition: transform 0.2s ease;
+  }
+  
+  .player img.playing {
+     transform: scale(0.9);
+  } */
+  

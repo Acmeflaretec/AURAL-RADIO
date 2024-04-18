@@ -129,3 +129,35 @@ window.onscroll = function() {
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
  }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Toggle play/pause functionality
+// let isPlaying = false;
+
+// function toggleAudio() {
+//    const audio = document.getElementById('audioPlayer');
+//    const playPauseBtn = document.getElementById('playPauseBtn');
+
+//    if (isPlaying) {
+//       audio.pause();
+//       playPauseBtn.src = "images/img.jpg";
+//    } else {
+//       audio.play();
+//       playPauseBtn.src = "images/img.jpg";
+//    }
+
+//    isPlaying = !isPlaying;
+// }
