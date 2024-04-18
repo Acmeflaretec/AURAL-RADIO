@@ -25,9 +25,10 @@ basic
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Roboto', sans-serif;
+     font-family: "Poppins", sans-serif;
      line-height: 1.80857;
      font-weight: normal;
+     text-align: justify;
 }
 
 a {
@@ -505,7 +506,7 @@ ul.email li a i {
 }
 
 .about_img figure img {
-     border-radius: 50px;
+     border-radius: 50%;
 }
 
 .divright {
