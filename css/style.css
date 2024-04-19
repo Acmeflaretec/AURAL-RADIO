@@ -97,7 +97,7 @@ h4 a,
 h5 a,
 h6 a {
      color: #212121;
-     text-decoration: none!important;
+     text-decoration: none !important;
      opacity: 1
 }
 
@@ -143,7 +143,7 @@ img {
      height: auto;
 }
 
- :focus {
+:focus {
      outline: 0;
 }
 
@@ -391,6 +391,7 @@ ul.email li a i {
      font-weight: bold;
      padding-bottom: 35px;
 }
+
 .airmic h3 {
      color: #fff;
      font-size: 30px;
@@ -431,6 +432,7 @@ ul.email li a i {
      font-weight: 500;
      margin-top: 40px;
 }
+
 .service_text h6 {
      color: #090303;
      font-size: 20px;
@@ -458,7 +460,8 @@ ul.email li a i {
      align-items: center;
      justify-content: center;
 }
-.service_img2 {
+
+/* .service_img2 {
      background: rgb(167, 19, 49);
      background: linear-gradient(139deg, rgba(167, 19, 49, 1) 6%, rgba(138, 21, 171, 1) 96%);
      border-radius: 20%;
@@ -468,7 +471,7 @@ ul.email li a i {
      display: flex;
      align-items: center;
      justify-content: center;
-}
+} */
 
 
 /* end services */
@@ -890,17 +893,22 @@ ul.social_icon li a:hover {
      position: inherit;
      background: #9a145b;
 }
+
 .inner_page .about {
-     margin:80px 0 190px 0;
+     margin: 80px 0 190px 0;
 }
+
 .inner_page .contact {
-     padding-bottom:80px;
+     padding-bottom: 80px;
 }
+
 .inner_page .footer {
      margin-top: 110px;
 }
+
 #backToTopBtn {
-     display: none; /* Hide the button by default */
+     display: none;
+     /* Hide the button by default */
      position: fixed;
      bottom: 20px;
      right: 20px;
@@ -913,12 +921,11 @@ ul.social_icon li a:hover {
      cursor: pointer;
      padding: 15px;
      border-radius: 50%;
-  }
-  
-  #backToTopBtn:hover {
+}
+
+#backToTopBtn:hover {
      background-color: #9a145b;
-  }
-  
+}
 
 
 
@@ -933,16 +940,16 @@ ul.social_icon li a:hover {
 
 
 
-/* 
-  
 
-  .listen-live-section {
+
+
+.listen-live-section {
      background-color: #f8f9fa;
      padding: 50px 0;
-  }
-  
-  .listen-live-box {
-     display: flex;
+}
+
+.listen-live-box {
+     /* display: flex;
      justify-content: center;
      align-items: center;
      max-width: 600px;
@@ -951,28 +958,88 @@ ul.social_icon li a:hover {
      border: 2px solid #ddd;
      border-radius: 10px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     background-color: #fff;
-  }
-  
-  .logo img {
-     max-width: 100px;
+     background-color: #fff; */
+     /* margin-top: 130px; */
+     display: flex;
+     justify-content: center;
+     position: relative;
+     height: 760px;
+     max-width: 420px;
+     /* width: 420px; */
+     margin-right: auto;
+     margin-left: auto;
+     background: rgba(255, 255, 255, 0.90);
+     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+     backdrop-filter: blur(1.0px);
+     -webkit-backdrop-filter: blur(1.0px);
+     border-radius: 10px;
+     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* .logo{
+     display: flex;
+     justify-content: center;
+  } */
+.logo img {
+     /* max-width: 100px; */
      height: auto;
      margin-right: 20px;
-  }
-  
-  .player {
+     width: 250px;
+}
+
+.player {
      display: flex;
      align-items: center;
      cursor: pointer;
-  }
-  
-  .player img {
-     width: 60%;
-     height: 60%;
+}
+
+.player img {
+     width: 250px;
+     /* width: 100%; */
+     height: 10 0%;
      transition: transform 0.2s ease;
-  }
-  
-  .player img.playing {
+}
+
+.player img.playing {
      transform: scale(0.9);
-  } */
-  
+}
+
+.nowPlaying {
+     width: 85%;
+     margin: 0 auto;
+}
+
+.music-wave {
+     position: absolute;
+     left: 0px;
+     right: 0px;
+     bottom: 0;
+     z-index: -1;
+     width: 420px;
+}
+
+.portfolio #portfolio-flters {
+     padding: 0;
+     margin: 0 auto 35px auto;
+     list-style: none;
+     text-align: center;
+     background: #fff;
+     border-radius: 50px;
+     padding: 15px 100px;
+     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+     font-weight: 500;
+}
+
+/* a:not([href]) {
+     color: inherit;
+     text-decoration: none;
+ } */
+.playerDiv {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+#myVideo {
+     position: absolute;
+ }

@@ -153,11 +153,40 @@ window.onscroll = function() {
 
 //    if (isPlaying) {
 //       audio.pause();
-//       playPauseBtn.src = "images/img.jpg";
+//       playPauseBtn.src = "images/Btnstop.png";
 //    } else {
 //       audio.play();
-//       playPauseBtn.src = "images/img.jpg";
+//       playPauseBtn.src = "images/Btnplay.png";
 //    }
 
 //    isPlaying = !isPlaying;
 // }
+
+
+let isPlaying = false;
+const audio = document.getElementById('audioPlayer');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const nowPlayingText = document.getElementById('nowPlaying');
+
+function toggleAudio() {
+    if (isPlaying) {
+        audio.pause();
+        playPauseBtn.src = "images/Btnplay.png";
+        nowPlayingText.style.display = "none";
+    } else {
+        audio.play();
+        playPauseBtn.src = "images/Btnstop.png";
+        nowPlayingText.style.display = "block";
+    }
+    
+    isPlaying = !isPlaying;
+}
+
+// Update Now Playing Information
+audio.addEventListener('playing', () => {
+    nowPlayingText.innerText = "AURAL RADIO PLAYING"; // Replace with actual station name or track info
+});
+
+audio.addEventListener('pause', () => {
+    nowPlayingText.style.display = "none"; // Hide now playing text when audio is paused
+});

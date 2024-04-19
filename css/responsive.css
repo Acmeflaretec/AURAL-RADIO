@@ -104,4 +104,7 @@ File Name: responsive.css
     .d_none {
         display: none;
     }
+    .listen-live-box{
+        height: 630px;
+    }
 }
