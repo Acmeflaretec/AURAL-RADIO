@@ -115,11 +115,14 @@ window.onscroll = function() {
  
  function scrollFunction() {
 	var backToTopBtn = document.getElementById("backToTopBtn");
+	var whatsapp = document.getElementById("whatsapp");
  
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 	   backToTopBtn.style.display = "block";
+	   whatsapp.style.display = "block";
 	} else {
 	   backToTopBtn.style.display = "none";
+	   whatsapp.style.display = "none";
 	}
  }
  
