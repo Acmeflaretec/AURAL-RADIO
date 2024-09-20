@@ -36,10 +36,10 @@
    <!-- end loader -->
    <div id="mySidepanel" class="sidepanel">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a  href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="searvices.html">Services</a>
-      <a class="active" href="shop.html">Shows</a>
+      <a class="active" href="shop.html">Song Request</a>
       <a href="contact.html">Contact</a>
    </div>
    <!-- header -->
@@ -66,145 +66,134 @@
       </div>
    </header>
    <!-- end header -->
-    <!-- our_mics -->
-    <div class="our_mics">
+   <!-- our_mics -->
+   <div class="our_mics"></div>
       <div class="container">
          <div class="row">
             <div class="col-md-10 offset-md-1">
                <div class="titlepage text_align_center">
-                  <h2>Our Shows</h2>
-                  <p style="color: black;"><strong>Experience our captivating radio shows: Sports Hour at 9 AM, Pop Hour at 12 PM, and Rock Hour at
-                     6
-                     PM. Engage with rich content and vibrant music.</strong></p>
+                  <h2>SONG REQUEST</h2>
+                  <p style="color: black;"><strong>Aural Radio offers a dedicated song request feature, allowing
+                        listeners to choose their favorite tracks for a personalized music experience.</strong></p>
                </div>
             </div>
          </div>
          <div class="row">
-            
+            <div>
+               <div class="sc-track-request-widget">
+                  <div is="track-request-widget" lang="en" api-base="https://radio.auralradiokerala.com:1290/api/v2"
+                     server-id="1" ip-timeout="0" track-timeout="0" bgcolor="#ffffff" bgopacity="1" tracks_num="20"
+                     track_width="180"
+                     track_image_default="https://radio.auralradiokerala.com:1290https://radio.auralradiokerala.com:1290/media/widgets/AURAL_RADIO_LOGO_YFZtqxw.jpg"
+                     meta_font_size="15" meta_font_style="italic" meta_font_color="#000000" meta_opacity="1"
+                     button_color="#401098" button_color_active="#bdbf91" button_font_color="#ffffff"
+                     button_font_size="14" ordering="3" allow_person_and_message="true" modal_background_color="#ffffff"
+                     modal_font_color="#000000" modal_background_opacity="1">
+                  </div>
+               </div>
+            </div>
+            <link rel="stylesheet" type="text/css"
+               href="https://radio.auralradiokerala.com:1290/media/static/css/request_track_widget/request_widget.css" />
+            <script type="text/javascript"
+               src="https://radio.auralradiokerala.com:1290/media/static/js/request_track_widget/request_widget.js"></script>
 
-            <div class="col-md-4">
-               <div class="service_img text_align_center">
-                  <i><img src="images/3.png" alt="#" /></i>
-               </div>
-               <div class="service_text text_align_center">
-                  <h3>Sports Hour </h3>
-                  <h6>9 AM </h6>
-                  <p>Rich and original content keeping listeners engaged with the latest in sports.</p>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="service_img text_align_center">
-                  <i><img src="images/POP.png" alt="#" /></i>
-               </div>
-               <div class="service_text text_align_center">
-                  <h3>Pop Hour</h3>
-                  <h6>12 PM</h6>
-                  <p>High-quality music and talk shows, offering a perfect midday escape. </p>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="service_img text_align_center">
-                  <i><img src="images/Rock.png" alt="#" /></i>
-               </div>
-               <div class="service_text text_align_center">
-                  <h3>Rock Hour</h3>
-                  <h6>6 PM </h6>
-                  <p>Discover new hits and classics, with fun facts and memorable tunes.</p>
-               </div>
-            </div>
+
+
          </div>
       </div>
    </div>
    <!-- end our_mics -->
-  <!-- footer -->
-  <footer>
-   <div class="footer">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <!-- <a class="logo_footer"><img src="images/output-onlinepngtools.png" alt="#"
-                     style="width: 100px;" /></a> -->
-                     <h1 style="color: white;"><strong> AURAL RADIO</strong></h1>
-            </div>
-            <!-- <div class="logo col-md-12">
-               <a href="index.html"><img s src="images/output-onlinepngtools.png" /></a>
-            </div> -->
-            <div class="col-md-5">
-               <div class="Informa conta">
-                  <h3>Address</h3>
-                  <ul>
-                     <li> Thrissur,Kerala, India
-                     </li>
-                  </ul>
-               </div>
-               <div class="Informa helpful">
-                  <ul>
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="about.html">About</a></li>
-                     <li><a href="services.html">Services</a></li>
-                     <li><a href="shop.html">Shows</a></li>
-                     <li><a href="contact.html">Contact</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="Informa conta">
-                  <h3>Contact Us</h3>
-                  <ul>
-                     <li> <a href="tel:6238312651"> +91 6238312651
-                        </a>
-                     </li>
-                     <li> <a href="mailto:auralradiokerala@gmail.com"> auralradiokerala@gmail.com
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-               <ul class="social_icon text_align_center">
-                  <li> <a href="https://www.facebook.com/auralradiokerala/"><i class="fa fa-facebook-f"></i></a></li>
-                  <li> <a href="https://twitter.com/auralradioindia"><i class="fa fa-twitter"></i></a></li>
-                  <li> <a href="https://www.instagram.com/auralradiokerala/"><i class="fa fa-instagram"
-                           aria-hidden="true"></i></a></li>
-                  <li> <a href="https://www.youtube.com/channel/UCKXefcE7uW_-VskoAK5Nt4A?reload=9"><i
-                           class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li> <a href="https://api.whatsapp.com/send?phone=6238312651"><i
-                           class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-               </ul>
-            </div>
-            <div class="col-md-3">
-               <div class="Informa">
-                  <h3>Newsletter</h3>
-                  <form class="newslatter_form">
-                     <input class="ente" disabled placeholder="Enter your email" type="text" name="Enter your email">
-                     <button class="subs_btn">Subscribe</button>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="copyright text_align_center">
+   <!-- footer -->
+   <footer>
+      <div class="footer">
          <div class="container">
             <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <p>© 2024 All Rights Reserved By AURAL RADIO. Design by <a href="https://acmeflare.in">
-                        Acmeflare</a>
-                  </p>
+               <div class="col-md-12">
+                  <!-- <a class="logo_footer"><img src="images/output-onlinepngtools.png" alt="#"
+                     style="width: 100px;" /></a> -->
+                  <h1 style="color: white;"><strong> AURAL RADIO</strong></h1>
+               </div>
+               <!-- <div class="logo col-md-12">
+               <a href="index.html"><img s src="images/output-onlinepngtools.png" /></a>
+            </div> -->
+               <div class="col-md-5">
+                  <div class="Informa conta">
+                     <h3>Address</h3>
+                     <ul>
+                        <li> Thrissur,Kerala, India
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="Informa helpful">
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="searvices.html">Services</a></li>
+                        <li><a href="shop.html">Song Request</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="Informa conta">
+                     <h3>Contact Us</h3>
+                     <ul>
+                        <li> <a href="tel:6238312651"> +91 6238312651
+                           </a>
+                        </li>
+                        <li> <a href="mailto:auralradiokerala@gmail.com"> auralradiokerala@gmail.com
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul class="social_icon text_align_center">
+                     <li> <a href="https://www.facebook.com/auralradiokerala/"><i class="fa fa-facebook-f"></i></a></li>
+                     <li> <a href="https://twitter.com/auralradioindia"><i class="fa fa-twitter"></i></a></li>
+                     <li> <a href="https://www.instagram.com/auralradiokerala/"><i class="fa fa-instagram"
+                              aria-hidden="true"></i></a></li>
+                     <li> <a href="https://www.youtube.com/channel/UCKXefcE7uW_-VskoAK5Nt4A?reload=9"><i
+                              class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                     <li> <a href="https://api.whatsapp.com/send?phone=6238312651"><i class="fa fa-whatsapp"
+                              aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3">
+                  <div class="Informa">
+                     <h3>Newsletter</h3>
+                     <form class="newslatter_form">
+                        <input class="ente" disabled placeholder="Enter your email" type="text" name="Enter your email">
+                        <button class="subs_btn">Subscribe</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copyright text_align_center">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <p>© 2024 All Rights Reserved By AURAL RADIO. Design by <a href="https://acmeflare.in">
+                           Acmeflare</a>
+                     </p>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-</footer>
-<a href="https://api.whatsapp.com/send?phone=6238312651"><img id="whatsapp" src="images/whatsapp.png" alt=""></a>
-
-<button onclick="topFunction()" id="backToTopBtn" title="Go to top">
-<i class="fa fa-chevron-up"></i>
-</button>
-<!-- end footer -->
-<!-- Javascript files-->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery-3.0.0.min.js"></script>
-<script src="js/custom.js"></script>
+   </footer>
+   <a href="https://api.whatsapp.com/send?phone=6238312651"><img id="whatsapp" src="images/whatsapp.png" alt=""></a>
+   <a href="https://www.buymeacoffee.com/auralradio" target="_blank"><img id="Coffee"
+         src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+         style="height: 40px !important;width: 152px !important;"></a>
+   <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+      <i class="fa fa-chevron-up"></i>
+   </button>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/custom.js"></script>
 </body>
 
 </html>

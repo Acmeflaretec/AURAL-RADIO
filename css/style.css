@@ -931,6 +931,14 @@ ul.social_icon li a:hover {
      width: 50px;
      height: 50px;
 }
+#Coffee{
+     display: none;
+     position: fixed;
+     bottom: 20px;
+     left: 20px;
+     z-index: 99;
+     
+}
 
 #backToTopBtn:hover {
      background-color: #9a145b;
@@ -1052,3 +1060,70 @@ ul.social_icon li a:hover {
 #myVideo {
      position: absolute;
  }
+
+ 
+
+ .container1 {
+     width: 100%;
+     /* height: 100vh; */
+     padding: 5% 8%;
+   }
+   .container1 h2 {
+     text-align: center;
+     font-size: 1.8rem;
+     font-weight: 600;
+     position: relative;
+   }
+   .container1 h3 {
+     text-align: center;
+     padding-top: 2%;
+     margin-bottom: 40px;
+     font-size: 1.4rem;
+     font-weight: 400;
+     position: relative;
+   }
+   .container1 h2::after {
+     content: "";
+     position: absolute;
+     bottom: -8px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 100px;
+     height: 5px;
+     background-color: var(--main-color);
+     border-radius: 20px;
+   }
+   .row1 {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 50px;
+   }
+   .row1 .service {
+     padding: 25px 15px;
+     background: transparent;
+     font-size: 15px;
+     border-radius: 5px;
+     text-align: center;
+     cursor: pointer;
+     transition: 0.5s;
+   }
+   .row1 .service:hover {
+     color: #fff;
+     background: linear-gradient(to left, #8f1588 4%, #8316cc 32%);;
+     transform: scale(1.05);
+   }
+   .row1 .service i {
+     color: var(--main-color);
+     margin-bottom: 20px;
+     font-size: 40px;
+     transition: 0.5s;
+   }
+   .row1 .service:hover i {
+     color: #fff;
+   }
+   .row1 .service h2 {
+     font-weight: 600;
+     margin-bottom: 20px;
+   }
+
+   
