@@ -10,7 +10,7 @@ $(function () {
 	/* Preloader
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 	
-	$('.loader_bg').fadeOut(250);
+	$('.loader_bg').hide().remove();
 	
 	
 	
