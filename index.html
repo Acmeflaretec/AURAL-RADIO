@@ -23,6 +23,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+   <link rel="preconnect" href="https://live.auralradiokerala.in" crossorigin>
+   <link rel="dns-prefetch" href="https://live.auralradiokerala.in">
 </head>
 <!-- body -->
 
@@ -103,7 +105,7 @@
                            </div>
                            <div class="music-player">
                                <div class="player" onclick="toggleAudio()">
-                                  <audio id="audioPlayer" src="https://live.auralradiokerala.in/auralradio/mp3">
+                                  <audio id="audioPlayer" preload="none" src="https://live.auralradiokerala.in/auralradio/mp3">
                                      <source src="https://live.auralradiokerala.in/auralradio/mp3" type="audio/mpeg">
                                      <source src="https://live.auralradiokerala.in/auralradio/aac_128" type="audio/aac">
                                   </audio>
@@ -385,8 +387,8 @@
                </div>
             </div>
             <link rel="stylesheet" type="text/css"
-               href="https://live.auralradiokerala.in:1290/media/static/css/request_track_widget/request_widget.css" />
-            <script type="text/javascript"
+               href="https://live.auralradiokerala.in:1290/media/static/css/request_track_widget/request_widget.css" media="print" onload="this.media='all'" />
+            <script defer type="text/javascript"
                src="https://live.auralradiokerala.in:1290/media/static/js/request_track_widget/request_widget.js"></script>
 
 

