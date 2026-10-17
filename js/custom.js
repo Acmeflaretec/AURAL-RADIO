@@ -119,13 +119,13 @@ window.onscroll = function() {
 	var Coffee = document.getElementById("Coffee");
  
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	   backToTopBtn.style.display = "block";
-	   whatsapp.style.display = "block";
-	   Coffee.style.display = "block";
+	   if (backToTopBtn) backToTopBtn.style.display = "block";
+	   if (whatsapp) whatsapp.style.display = "block";
+	   if (Coffee) Coffee.style.display = "block";
 	} else {
-	   backToTopBtn.style.display = "none";
-	   whatsapp.style.display = "none";
-	   Coffee.style.display = "none";
+	   if (backToTopBtn) backToTopBtn.style.display = "none";
+	   if (whatsapp) whatsapp.style.display = "none";
+	   if (Coffee) Coffee.style.display = "none";
 	}
  }
  
@@ -175,24 +175,27 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const nowPlayingText = document.getElementById('nowPlaying');
 
 function toggleAudio() {
+    if (!audio) return;
     if (isPlaying) {
         audio.pause();
-        playPauseBtn.src = "images/Btnplay.png";
-        nowPlayingText.style.display = "none";
+        if (playPauseBtn) playPauseBtn.src = "images/Btnplay.png";
+        if (nowPlayingText) nowPlayingText.style.display = "none";
     } else {
         audio.play();
-        playPauseBtn.src = "images/Btnstop.png";
-        nowPlayingText.style.display = "block";
+        if (playPauseBtn) playPauseBtn.src = "images/Btnstop.png";
+        if (nowPlayingText) nowPlayingText.style.display = "block";
     }
     
     isPlaying = !isPlaying;
 }
 
 // Update Now Playing Information
-audio.addEventListener('playing', () => {
-    nowPlayingText.innerText = "AURAL RADIO PLAYING"; // Replace with actual station name or track info
-});
+if (audio) {
+    audio.addEventListener('playing', () => {
+        if (nowPlayingText) nowPlayingText.innerText = "AURAL RADIO PLAYING"; // Replace with actual station name or track info
+    });
 
-audio.addEventListener('pause', () => {
-    nowPlayingText.style.display = "none"; // Hide now playing text when audio is paused
-});
+    audio.addEventListener('pause', () => {
+        if (nowPlayingText) nowPlayingText.style.display = "none"; // Hide now playing text when audio is paused
+    });
+}

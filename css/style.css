@@ -910,7 +910,7 @@ ul.social_icon li a:hover {
      display: none;
      /* Hide the button by default */
      position: fixed;
-     bottom: 20px;
+     bottom: 80px;
      right: 20px;
      z-index: 99;
      font-size: 16px;

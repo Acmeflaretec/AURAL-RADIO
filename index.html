@@ -103,7 +103,10 @@
                            </div>
                            <div class="music-player">
                                <div class="player" onclick="toggleAudio()">
-                                  <audio id="audioPlayer" src="https://live.auralradiokerala.in:1305/stream"></audio>
+                                  <audio id="audioPlayer" src="https://live.auralradiokerala.in/auralradio/mp3">
+                                     <source src="https://live.auralradiokerala.in/auralradio/mp3" type="audio/mpeg">
+                                     <source src="https://live.auralradiokerala.in/auralradio/aac_128" type="audio/aac">
+                                  </audio>
                                   <img id="playPauseBtn" src="images/Btnplay.png" alt="Play" class="play">
                                </div>
                            </div>
@@ -578,7 +581,7 @@
          </div>
       </div>
    </footer>
-   <a href="https://www.buymeacoffee.com/auralradio" target="_blank"><img id="Coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 152px !important;" ></a>
+   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="auralradio" data-description="Support me on Buy me a coffee!" data-message="Support us" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
       <i class="fa fa-chevron-up"></i>
    </button>
