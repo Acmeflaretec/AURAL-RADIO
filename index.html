@@ -21,8 +21,10 @@
    <link rel="stylesheet" href="css/responsive.css">
    <!-- awesome fontfamily -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rye&family=Noto+Sans+Malayalam:wght@500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/player.css">
    <link rel="preconnect" href="https://live.auralradiokerala.in" crossorigin>
    <link rel="dns-prefetch" href="https://live.auralradiokerala.in">
 </head>
@@ -37,6 +39,7 @@
    <div id="mySidepanel" class="sidepanel">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <a class="active" href="index.html">Home</a>
+      <a href="player.html">Live Radio Player</a>
       <a href="about.html">About</a>
       <a href="searvices.html">Services</a>
       <a href="shop.html">Song Request</a>
@@ -80,50 +83,123 @@
                </div>
             </div>
             <div class="col-md-6">
-               <div class="mic_img">
-                  <!-- <figure><img src="images/right_side.png" alt="#" /></figure> -->
-                  <div class="container">
-                     <div class="listen-live-box row">
-                        <div class="playerDiv">
-                           <div class="logo">
-                              <img src="images/output-onlinegiftools.gif" alt="Logo">
+               <div class="aural-player-section">
+                  <div class="aural-player-wrapper">
+                     <div class="aural-card" id="playerCard">
+                        <!-- IST Time & Date Bar -->
+                        <div class="ist-top-bar">
+                           <div class="live-badge">
+                              <span class="live-dot"></span> LIVE
                            </div>
-                           <div id="refresh" onclick="refreshNow()">
+                           <div id="istClock">Loading IST...</div>
+                        </div>
 
-                              <div class="portfolio">
-                                 <div class="row">
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                       <ul id="portfolio-flters">
-                                          <!-- <a class="myButton1"><li class="filter-active list1"> Tamil </li></a> -->
-                                          <a class="myButton2">
-                                             <li class="list2"><strong>Malayalam</strong> </li>
-                                          </a>
-                                       </ul>
-                                    </div>
-                                 </div>
+                        <!-- Animated Logo & Music Notations Section -->
+                        <div class="logo-showcase">
+                           <div class="logo-aura"></div>
+
+                           <!-- 4 Floating SVG Music Notations -->
+                           <svg class="floating-svg-note fn-1" viewBox="0 0 24 24">
+                              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                           </svg>
+                           <svg class="floating-svg-note fn-2" viewBox="0 0 24 24">
+                              <path d="M21 3L9 5v11.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V9.83l8-1.33v5.05c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V3z"/>
+                           </svg>
+                           <svg class="floating-svg-note fn-3" viewBox="0 0 24 24">
+                              <path d="M21 3L9 5v11.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V9.83l8-1.33v5.05c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V3z"/>
+                           </svg>
+                           <svg class="floating-svg-note fn-4" viewBox="0 0 24 24">
+                              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                           </svg>
+
+                           <!-- Main Animated Vector Logo with Animated Inner Music Notes -->
+                           <div class="main-logo-wrap">
+                              <svg class="custom-logo-svg" viewBox="0 0 260 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <!-- Left Sound Waves -->
+                                 <path class="wave-arc-1" d="M88 45 A 35 35 0 0 0 88 95" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+                                 <path class="wave-arc-2" d="M74 36 A 50 50 0 0 0 74 104" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+                                 <path class="wave-arc-3" d="M60 27 A 65 65 0 0 0 60 113" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+                                 <path class="wave-arc-4" d="M46 18 A 80 80 0 0 0 46 122" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+
+                                 <!-- Right Sound Waves -->
+                                 <path class="wave-arc-1" d="M172 45 A 35 35 0 0 1 172 95" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+                                 <path class="wave-arc-2" d="M186 36 A 50 50 0 0 1 186 104" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+                                 <path class="wave-arc-3" d="M200 27 A 65 65 0 0 1 200 113" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+                                 <path class="wave-arc-4" d="M214 18 A 80 80 0 0 1 214 122" stroke="#2b2b2b" stroke-width="6.5" stroke-linecap="round"/>
+
+                                 <!-- Center Ear Contour -->
+                                 <path d="M114 43 C 119 22, 162 20, 164 56 C 166 82, 146 88, 140 105 C 135 119, 123 121, 117 117" stroke="#000" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+                                 <path d="M124 46 C 128 33, 153 33, 154 57 C 155 72, 143 78, 139 87" stroke="#000" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+                                 <!-- Animated Music Notes Entering the Ear -->
+                                 <g class="inner-note-1">
+                                    <ellipse cx="93" cy="100" rx="5.5" ry="4.2" transform="rotate(-20 93 100)" fill="#000"/>
+                                    <ellipse cx="107" cy="94" rx="5.5" ry="4.2" transform="rotate(-20 107 94)" fill="#000"/>
+                                    <path d="M97 99 L99 75 L112 71 L111 93" stroke="#000" stroke-width="2.8" fill="none"/>
+                                    <path d="M98 76 L112 72" stroke="#000" stroke-width="4.5"/>
+                                 </g>
+                                 <g class="inner-note-2">
+                                    <ellipse cx="118" cy="83" rx="5" ry="3.8" transform="rotate(-20 118 83)" fill="#000"/>
+                                    <path d="M114 84 L112 103" stroke="#000" stroke-width="2.5"/>
+                                 </g>
+                                 <g class="inner-note-3">
+                                    <ellipse cx="129" cy="76" rx="5" ry="3.8" transform="rotate(-20 129 76)" fill="#000"/>
+                                    <ellipse cx="141" cy="65" rx="5" ry="3.8" transform="rotate(-20 141 65)" fill="#000"/>
+                                    <path d="M125 77 L124 96 L136 91 L137 66" stroke="#000" stroke-width="2.5" fill="none"/>
+                                    <path d="M124 95 L136 90" stroke="#000" stroke-width="4"/>
+                                 </g>
+                              </svg>
+                              <h2 class="station-title">AURAL RADIO</h2>
+                              <div class="station-tagline">
+                                 <svg class="tagline-clef-svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                                 <span>മനസ്സ് നിറയെ പാട്ട്</span>
+                                 <svg class="tagline-clef-svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
                               </div>
                            </div>
-                           <div class="music-player">
-                               <div class="player" onclick="toggleAudio()">
-                                  <audio id="audioPlayer" preload="none" src="https://live.auralradiokerala.in/auralradio/mp3">
-                                     <source src="https://live.auralradiokerala.in/auralradio/mp3" type="audio/mpeg">
-                                     <source src="https://live.auralradiokerala.in/auralradio/aac_128" type="audio/aac">
-                                  </audio>
-                                  <img id="playPauseBtn" src="images/Btnplay.png" alt="Play" class="play">
-                               </div>
+                        </div>
+
+                        <!-- Features Badges -->
+                        <div class="badges-row">
+                           <span class="info-pill">Malayalam</span>
+                           <span class="info-pill hd">24/7 - HD Quality</span>
+                        </div>
+
+                        <!-- Main Play/Pause Button -->
+                        <div class="play-center-wrap">
+                           <div class="outer-ring">
+                              <div class="inner-white-circle"></div>
                            </div>
-                           <p class="nowPlay"><strong>Now Playing:</strong> </p>
-                           <span id="marquee">
-                              <p id="nowPlaying" style="color: rgba(167, 19, 49, 1); font-weight: 600; display: none;">
-                                 <strong>AURAL RADIO PLAYING</strong>
-                              </p>
-                           </span>
+                           <button class="play-btn" id="playPauseBtn" aria-label="Play Aural Radio">
+                              <svg id="playIcon" viewBox="0 0 24 24">
+                                 <path d="M8 5v14l11-7z"/>
+                              </svg>
+                              <svg id="pauseIcon" viewBox="0 0 24 24" style="display: none;">
+                                 <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                              </svg>
+                           </button>
                         </div>
 
-                        <div class="newPlaying">
-
-                           <img src="images/soundwave-e1518895558464-removebg-preview.png" alt class="music-wave">
+                        <!-- Status Display -->
+                        <div class="status-box">
+                           <div class="now-playing-label">Now Playing</div>
+                           <div class="stream-status" id="statusText">TAP PLAY TO LISTEN</div>
                         </div>
+
+                        <!-- Volume Slider -->
+                        <div class="volume-container">
+                           <svg viewBox="0 0 24 24">
+                              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                           </svg>
+                           <input type="range" id="volumeSlider" class="vol-slider" min="0" max="1" step="0.02" value="0.9" aria-label="Volume Slider">
+                        </div>
+
+                        <!-- Audio Spectrum Visualizer -->
+                        <div class="spectrum-box">
+                           <canvas id="spectrumCanvas" width="340" height="50"></canvas>
+                        </div>
+
+                        <!-- Hidden Audio Element -->
+                        <audio id="radioAudio" preload="none"></audio>
                      </div>
                   </div>
                </div>
@@ -544,6 +620,7 @@
                   <div class="Informa helpful">
                      <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="player.html">Live Radio</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="searvices.html">Services</a></li>
                         <li><a href="shop.html">Song Request</a></li>
@@ -603,6 +680,7 @@
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
    <script src="js/custom.js"></script>
+   <script src="js/player.js"></script>
 </body>
 
 </html>
